@@ -1,6 +1,5 @@
 let totalGeral = 0;
-document.getElementById("lista-produtos").innerHTML = "";
-document.getElementById("valor-total").textContent = "Total: R$0";
+limpar();
 
 function adicionar() {
   let produto = document.getElementById("produto").value;
@@ -22,4 +21,8 @@ function adicionar() {
   document.getElementById("quantidade").value = 0;
 }
 
-function limpar() {}
+function limpar() {
+  totalGeral = 0;
+  document.getElementById("lista-produtos").innerHTML = "";
+  document.getElementById("valor-total").textContent = "Total: R$0";
+}
