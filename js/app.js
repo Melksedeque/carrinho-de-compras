@@ -1,15 +1,14 @@
 function adicionar() {
-  const input = document.getElementById("input");
-  const lista = document.getElementById("lista");
-  const li = document.createElement("li");
-  let text = input.value;
-  li.innerHTML = text;
-  lista.appendChild(li);
-  input.value = "";
-  input.focus();
+  let produto = document.getElementById("produto").value;
+  let nomeProduto = produto.split("-")[0];
+  let valorUnitario = produto.split("R$")[1];
+  let quantidade = document.getElementById("quantidade").value;
+  let preco = quantidade * valorUnitario;
+
+  alert("Produto: " + nomeProduto);
+  alert("Valor Unitário: " + valorUnitario);
+  alert("Quantidade: " + quantidade);
+  alert("Preço: " + preco);
 }
 
-function limpar() {
-  const lista = document.getElementById("lista");
-  lista.innerHTML = "";
-}
+function limpar() {}
